@@ -23,6 +23,7 @@
                   v-model="search"
                   label="Search ..."
                   class="mx-4"
+                  color="gray"
               ></v-text-field>
 
               <v-dialog
@@ -32,7 +33,7 @@
                 <v-card>
                   <v-container>
                     <h1 class="title">{{ item.name }}</h1>
-                    <div class="section" v-for="(value, key) in item" :key="key" v-if="key !== 'name'">
+                    <div class="section" v-for="(value, key) in item.detail" :key="key">
                       <div class="section__title">{{ key }} :</div>
                       <div class="section__text">
                         <span class="section__detail" v-for="(v, idx) in value" :key="idx">{{ v }}</span>
@@ -68,7 +69,8 @@
                     class="mx-4"
                     dark
                     icon
-                    href="https://github.com/"
+                    href="https://github.com/Sergey-Kukharenko/vuetify-datatable.git"
+                    target="_blank"
                 >
                   <v-icon size="24px">
                     {{ 'mdi-github' }}

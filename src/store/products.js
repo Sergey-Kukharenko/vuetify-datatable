@@ -43,7 +43,7 @@ export default {
                     commit('setError', product.message)
                 } else {
                     commit('clearError')
-                    commit('setProduct', {...product, name: query})
+                    commit('setProduct', {name: query, detail: {...product}})
                 }
                 commit('setLoading', false)
 
